@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import Post from "../components/Post";
 import { getPost } from "../modules/posts";
 
@@ -19,7 +20,11 @@ function PostContainer({ postId }) {
   if (error) return <div>에러 발생!</div>;
   if (!data) return null;
 
-  return <Post post={data} />;
+  return (
+    <>
+      <Post post={data} />
+    </>
+  );
 }
 
 export default PostContainer;

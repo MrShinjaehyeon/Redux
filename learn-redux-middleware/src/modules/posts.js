@@ -143,3 +143,9 @@ export default function posts(state = initialState, action) {
       return state;
   }
 }
+
+// export const goToHome =
+//   () =>
+//   (dispatch, getState, { history }) => {
+//     history.push("/");
+//   };

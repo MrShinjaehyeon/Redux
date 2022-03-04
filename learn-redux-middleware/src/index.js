@@ -12,6 +12,9 @@ import { composeWithDevTools } from "redux-devtools-extension"; // 리덕스 관
 import thunk from "redux-thunk"; // 대표적인 비동기 처리 리덕스 미들웨어
 import { BrowserRouter } from "react-router-dom";
 
+// axios.defaults.baseURL = process.env.NODE_ENV === 'development' ? '/' : '실제 프로덕션 서버';
+// process.env.NODE_ENV 는 현재 환경이 프로덕션인지 개발모드인지 볼 수 있는 값.
+
 const store = createStore(
   rootReducer,
   // logger 를 사용하는 경우, logger가 가장 마지막에 와야 함.
